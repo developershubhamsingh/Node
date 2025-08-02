@@ -1,0 +1,13 @@
+{
+  "name": "inbuilt",
+  "version": "1.0.0",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node https.js",
+    "dev": "nodemon https.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
