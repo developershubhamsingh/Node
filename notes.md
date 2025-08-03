@@ -90,6 +90,18 @@ install global packages
             "start": "node http.js",
             "dev": "nodemon http.js"
         }
+Express : frames works of nodes .
+
+=> create folder .
+=> npm init -y
+=> create .gitignore file .
+=> create readme.md file .
+=> npm i express .
+=> create aps.js file .
+=> write "scripts": {
+            "start": "node aps.js",
+            "dev": "nodemon aps.js"
+        }
 
 CRUD
 Create Read Update Delete
@@ -100,3 +112,5 @@ Post> insert data in database
 Get > Retrieve the data
 Put/Patch > Update the records
 Delete > Remove
+
+=> To access the method from the express we have to make the objects of express.
