@@ -1,31 +1,53 @@
-let fs = require('fs')
+// const fs = require('fs');
 
-// creating and writing content in it 
-// fs.writeFile('file_1.txt', 'Hello !', (err) => {
-//     if (err) throw err;
-//     console.log("The File file_1.txt  created successfully .")
-// })
+//creating file and writing content into it .//
 
-//appending content in file_1.txt .
-// fs.appendFile('file_1.txt', 'Hello Again 😊😊😊', (err) => {
-//     if (err) throw err;
-//     console.log("The File file_1.txt  append  successfully .")
-// })
-
-// reading the files .
-// fs.readFile('file_1.txt', 'utf-8', (err, data) => {
-//     if (err) throw err;
-//     console.log("The data of file_1.txt  : \n", data)
-// })
-//Renaming the files .
-// fs.rename('file_1.txt', 'file_1', (err) => {
-//     if (err) throw err;
-//     console.log("The file file_1.txt renamed successfully")
+// fs.writeFile('hello.text', 'hello writefile', (error) => {
+//     if (error) throw error;
+//     console.log(`file created and data inserted successfully`)
 // });
 
-//deleting the files .
-// fs.unlink('file_1', (err) => {
-//     if (err) throw err;
-//     console.log("file deleted successfully")
+//Appending data .//
+
+// fs.appendFile('hello.text', "\n data appended successfully .", (error) => {
+//     if (error) throw error;
+//     console.log('data appended success')
 // })
 
+// reading data .//
+// fs.readFile('hello.text', 'utf-8', (error, data) => {
+//     if (error) throw error;
+//     console.log('file read :', data)
+// })
+
+//renaming the file .//
+
+// fs.rename('hello.text', 'hello.txt', (error) => {
+//     if (error) throw error;
+//     console.log('file renamed successfully')
+// })
+
+
+//file deletion .// 
+// fs.unlink('hello.txt', (error) => {
+//     if (error) throw error;
+//     console.log('file deletion success')
+// })
+
+// const fs = require('fs')
+// const http = require('http');
+
+// const server = http.createServer((req, res) => {
+//     //reading file .//
+//     fs.readFile('city.json', 'utf-8', (error, data) => {
+//         if (error) throw error;
+//         console.log('file reading success')
+//         res.write(data)
+//         res.end()
+//     })
+
+// })
+// server.listen(7000, (error) => {
+//     if (error) throw error;
+//     console.log('server running on port no 7000')
+// })

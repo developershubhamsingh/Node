@@ -1,6 +1,19 @@
 https://endoflife.date/  
 https://survey.stackoverflow.co/2025/technology/
 
+echo "# Node" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/developershubhamsingh/Node.git
+git push -u origin main
+
+git remote add origin https://github.com/developershubhamsingh/Node.git
+git branch -M main
+git push -u origin main
+
+
 Node.js lets you run JavaScript outside the browser, especially on the server.
 It is used to build server-side applications.
 Nodejs : 
@@ -64,7 +77,7 @@ Apis : It is a url containing data within , developed in backend by any language
 Rest full Apis: Every apis act as new request . 
 
 nodemon : 
-    every time we make change in file or code we need restart the server to reflect in the browser so nodemon package helps to get over this.
+    every time we make change in file or code we need to restart the server to reflect in the browser so nodemon package helps to get over this.
     npm i nodemon
 
 install global packages

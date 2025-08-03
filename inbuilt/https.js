@@ -1,4 +1,4 @@
-// creating apis with inbuilt package http then we get to know what is the problem with http and why we need express.
+//creating apis with inbuilt package http then we get to know what is the problem with http and why we need express.
 //handling route with http server is difficult so we work with express .
 //express is a framework of node that allows to create routes very easily .
  
