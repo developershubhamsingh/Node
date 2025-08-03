@@ -114,3 +114,5 @@ Put/Patch > Update the records
 Delete > Remove
 
 => To access the method from the express we have to make the objects of express.
+
+=> Try express router when dealing with routes . 

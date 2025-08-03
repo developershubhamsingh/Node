@@ -1,0 +1,46 @@
+let express = require('express');
+//  To access the method from the express we have to make the objects of express.
+let app = express();
+let port = 7000;
+
+//Try express router when dealing with routes .
+
+let categoryRouter = express.Router();
+let productsRouter = express.Router();
+
+// Get > Retrieve the data
+// default routes .//
+app.get('/', (req, res) => {
+    res.send(`<h1>Hello from express .</h1>`)
+});
+
+//adding more routes .//
+
+categoryRouter.route('/')
+    .get((req, res) => {
+        res.send(`<h1>This is category Route .</h1>`)
+    })
+
+categoryRouter.route('/details')
+    .get((req, res) => {
+        res.send(`<h1>This is category details Route .</h1>`)
+    })
+
+productsRouter.route('/')
+    .get((req, res) => {
+        res.send(`<h1>This is products Routes . </h1>`)
+    })
+productsRouter.route('/details')
+    .get((req, res) => {
+        res.send(`<h1>This is products details Routes . </h1>`)
+    })
+
+app.use('/category', categoryRouter);
+app.use('/products', productsRouter);
+
+app.listen(port, (err) => {
+    if (err) throw err;
+    console.log(`server is running on port ${port}`)
+})
+
+ 
