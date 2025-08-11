@@ -2,7 +2,7 @@ https://endoflife.date/
 https://survey.stackoverflow.co/2025/technology/
 
 echo "# Node" >> README.md
-git init
+git init    
 git add .
 git commit -m "first commit"
 git branch -M main
@@ -17,13 +17,14 @@ git push -u origin main
 Node.js lets you run JavaScript outside the browser, especially on the server.
 It is used to build server-side applications.
 Nodejs : 
-    - single threaded . 
-    - async . ( multiple things are happening parallel ).
+    <!-- - single threaded . Thread = Instructions execute करने का रास्ता -->
+    <!-- - async . ( multiple things are happening parallel ). tasks runs in backgrounds -->
     - non blocking I / O .
 
 NPM: https://www.npmjs.com/
     It is a open source registry where all packages are kept that anyone can try and contribute to the developments .
 
+packages : supporting library .
     
 json : 
     javascript Object Notation .
@@ -64,17 +65,24 @@ step to install package(local dep)
     NodejS must be installed in laptop
     > go inside the folder using cmd/terminal
     > npm i package name / npm install package@version
-
+    
 for dev dependency
     > npm i package name --save-dev
     > package which is required at the time of development called as dev dependencies like Logging .
     > npm i chai --save-dev 
-    
-Basic NodeJS(in built)(Os,file,http)
+    > hence node module is heavy folder to avoid the load over that we divide wht to install on server wht not to install we differentiate between that .
+      
+Basic NodeJS (Inbuilt package in node) (in built)(Os,file,http)
+
 callback function : when we pass function as a parameter in another function .
+
 Apis : It is a url containing data within , developed in backend by any language ,that returns json format of data when calls . 
 
-Rest full Apis: Every apis act as new request . 
+Rest full Apis: Every request act as new request . 
+local host = or = 127.0.0.1: port numbers
+avoid port numbers 8080 
+
+node is a framework that create creates its on server .
 
 nodemon : 
     every time we make change in file or code we need to restart the server to reflect in the browser so nodemon package helps to get over this.
