@@ -124,3 +124,10 @@ Delete > Remove
 => To access the method from the express we have to make the objects of express.
 
 => Try express router when dealing with routes . 
+
+=> ejs(embedded js) / swig / pug /vas handle var= template engine  middleware library for showing less content with ui .
+=> npm i ejs .
+=> when writing logics <% logics %> 
+=> else for binding <%=var names%> 
+=>destructing in js:if both the side of are same value then write one value.
+    ex: category = category (then write it as only)  category .

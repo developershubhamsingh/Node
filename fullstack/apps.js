@@ -7,11 +7,22 @@ let port = 7000;
 
 let categoryRouter = require('./src/controller/categoryRouter')();
 let productsRouter = require('./src/controller/productsRouter')();
+// 
+// static file path //
+app.use(express.static(__dirname + "/public"))
+//ejs file path //
+app.set("views", "./src/views")
+// view engine//
+app.set("view engine", "ejs")
 
+// 
 // Get > Retrieve the data
 // default routes .//
 app.get('/', (req, res) => {
-    res.send(`<h1>Hello from express .</h1>`)
+    // res.send(`<h1>Hello from express .</h1>`)
+    res.render("index",{title:"Home Pages"})
+    // this is how data can be binned.//
+    //     <h2><%=title%></h2>
 });
 
 
