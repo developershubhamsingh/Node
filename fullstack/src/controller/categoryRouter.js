@@ -1,7 +1,7 @@
 let express = require('express');
 let categoryRouter = express.Router();
 
-let categoryData = [
+let Data = [
     {
         "id": 1,
         "category": "Fashion",
@@ -23,19 +23,19 @@ let categoryData = [
         "thumb": "https://i.ibb.co/r3SZq8S/footware.jpg"
     }
 ]
-const router = () => {
+const router = (navLink) => {
 
     categoryRouter.route('/')
         .get((req, res) => {
             // res.send(`<h1>This is category Route .</h1>`)
-            res.render('category', { categories: categoryData ,title:"category page" })
+            res.render('category', {title: "category page", category:Data, navLink })
         })
 
-    categoryRouter.route('/details')
-        .get((req, res) => {
-            res.send(`<h1>This is category details Route .</h1>`)
-
-        })
+    // categoryRouter.route('/details')
+    //     .get((req, res) => {
+    //         // res.send(`<h1>This is category details Route .</h1>`) 
+    //         res.render("category",{title:"Category Page", navLink})
+    //     })
     return categoryRouter
 }
 module.exports = router

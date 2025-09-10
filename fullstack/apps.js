@@ -5,9 +5,16 @@ let port = 7000;
 
 //Try express router when dealing with routes .
 
-let categoryRouter = require('./src/controller/categoryRouter')();
-let productsRouter = require('./src/controller/productsRouter')();
-// 
+
+let navLink = [
+    { name: "Home", link: "/" },
+    { name: "Category", link: "/category" },
+    { name: "Products", link: "/products" },
+]
+
+let categoryRouter = require('./src/controller/categoryRouter')(navLink);
+let productsRouter = require('./src/controller/productsRouter')(navLink);
+
 // static file path //
 app.use(express.static(__dirname + "/public"))
 //ejs file path //
@@ -20,7 +27,7 @@ app.set("view engine", "ejs")
 // default routes .//
 app.get('/', (req, res) => {
     // res.send(`<h1>Hello from express .</h1>`)
-    res.render("index",{title:"Home Pages"})
+    res.render("index", { title: "Home Pages .", text: "full Stack ." })
     // this is how data can be binned.//
     //     <h2><%=title%></h2>
 });

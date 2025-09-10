@@ -1,6 +1,6 @@
 let express = require('express');
 let productsRouter = express.Router();
-let Data = [
+let products = [
     {
         "id": 1,
         "product_name": "Girls top",
@@ -513,17 +513,19 @@ let Data = [
         "company": "Bajaj"
     }
 ]
-const router = () => {
+const router = (navLink) => {
     productsRouter.route('/')
         .get((req, res) => {
-            res.send(`<h1>This is products Routes . </h1>`)
+            // res.send(`<h1>This is products Routes . </h1>`)
+             res.render('products', {title: "products page",products, navLink }) //destructuring//
         })
-    productsRouter.route('/details')
-        .get((req, res) => {
-            res.send(`<h1>This is products details Routes . </h1>`)
-            res.render('category', { product: Data, title: "products page" })
 
-        })
+    // productsRouter.route('/details')
+    //     .get((req, res) => {
+    //         res.send(`<h1>This is products details Routes . </h1>`)
+    //         res.render('category', { product: Data, title: "products page" })
+
+    //     })
     return productsRouter
 }
 module.exports = router 
