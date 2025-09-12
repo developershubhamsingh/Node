@@ -146,3 +146,42 @@ Delete > Remove
 
 =>destructing in js:if both the side have the same value then remove one value and write one value .
     ex: category = category (then write it as only)  category .
+
+# Database (Mongodb) : 
+
+Sql : 
+> structured .
+> Data is represented in tabular format .
+> Chances of memory get wasted.
+> it require predefined schema .
+> Ex :
+    Roll No.| Hindi | English |
+      1     |  80   |         |
+      3     |  90   |         |
+
+MongoDb (NoSql) : 
+> unstructured .
+> data is represented in json format .
+> No Chance of memory wasted .
+> it  is schema less .
+> Ex : 
+    [
+     {
+        "roll no : 1 ,
+        "hindi"  : 80,
+     } ,
+      {
+        "roll no : 1 ,
+        "english"  : 70,
+     }   ,
+      {
+        "roll no : 1 ,
+         "hindi"  : 90,
+        "computer"  : 80,
+     } 
+    ]
+
+# MongoDb setups : 
+> Locals.
+> Clouds.
+ 
