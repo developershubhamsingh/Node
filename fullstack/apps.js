@@ -2,8 +2,8 @@ let express = require('express');
 //  To access the method from the express we have to make the objects of express.
 let app = express();
 let port = 7000;
-
 //Try express router when dealing with routes .
+let {dbConnect}= require('./src/controller/dbcontroller');
 
 
 let navLink = [
@@ -38,6 +38,7 @@ app.use('/category', categoryRouter);
 app.use('/products', productsRouter);
 
 app.listen(port, (err) => {
+    dbConnect();
     if (err) throw err;
     console.log(`server is running on port ${port}`)
 })

@@ -185,3 +185,7 @@ MongoDb (NoSql) :
 > Locals.
 > Clouds.
  
+ # connecting mongodb :
+  > npm i mongodb
+  > create categoryRouter.js in controller .
+  > default port of mongodb 27017 .
