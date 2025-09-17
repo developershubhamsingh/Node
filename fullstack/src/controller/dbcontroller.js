@@ -10,8 +10,14 @@ const dbConnect = async () => {
     db = client.db('node');
     console.log("Database connection successful .");
 }
+// getting data from database.//
+const getData = async (colName, query) => {
+    await db.collection(colName).find(query).toArray();
+}
+
 module.exports = {
-    dbConnect
+    dbConnect,
+    getData
 }
 
 
