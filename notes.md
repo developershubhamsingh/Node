@@ -14,7 +14,7 @@ git branch -M main
 git push -u origin main
 
 
-# Node.js lets you run JavaScript outside the browser, especially on the server.
+# Node.js allows to run JavaScript outside the browser, especially on the server.
 # It is used to build server-side applications.
 
 # Nodejs : 
@@ -48,7 +48,7 @@ Ex : [
         This is Entry point to the applications .
         Contains metadata (name,version.descriptions).
         Contains scripts( run ,build,test) .
-        Contains all record of the package install .
+        Contains all record of the packages install .
 
 # step to generate package.json 
      NodejS must be installed in laptop
@@ -58,7 +58,8 @@ Ex : [
      type YES
 
 # package-lock.json : 
-   > with which package which dependency came  .
+   > it is dependency tree .
+   > it tells with which package which dependency came  .
    > it tells which package depends on what .
 
 # for node modules : npm i
@@ -81,7 +82,7 @@ dev
     > npm i chai --save-dev 
     > hence node module is heavy folder to avoid the load over that we divide what to install on server wht not to install we differentiate between that .
       
-# Basic NodeJS (Inbuilt package in node) (in built)(Os,file,http)
+# Basic NodeJS (Inbuilt package in node) (Os,file,http)
 
 # callback function : when we pass function as a parameter in another function .
 
@@ -127,7 +128,7 @@ Create Read Update Delete
 
 Post   Get  Put    Delete
 
-Post> insert data in database
+Post > insert data in database
 Get > Retrieve the data
 Put/Patch > Update the records
 Delete > Remove
@@ -144,7 +145,7 @@ Delete > Remove
 => when writing logics <% logics %> 
 => else for binding <%=variable names%> 
 
-=>destructing in js:if both the side have the same value then remove one value and write one value .
+=> destructing in js : if both the side have the same value then remove one value and write one value .
     ex: category = category (then write it as only)  category .
 
 # Database (Mongodb) : 
@@ -189,3 +190,12 @@ MongoDb (NoSql) :
   > npm i mongodb
   > create categoryRouter.js in controller .
   > default port of mongodb 27017 .
+
+# Change the port if want to run on other : 
+<!-- agar data kisi or folder me rakhna ho -->
+    mongod --port 27018 --dbpath "C:\data\db" 
+    
+<!--agar port change karna ho   -->
+    mongod --port 27018
+
+    then change mongoUrl then it will work
