@@ -2,6 +2,9 @@
 # https://endoflife.date/  
 # https://survey.stackoverflow.co/2025/technology/
 
+# git bash :through git bash you can push code to github.
+# ctrl + f to search in a file .
+
 git init    
 git add .
 git commit -m "first commit"
@@ -17,20 +20,25 @@ git push -u origin main
 # Node.js allows to run JavaScript outside the browser, especially on the server.
 # It is used to build server-side applications.
 
-# Nodejs : 
-    <!-- - single threaded . Thread = Instructions execute करने का रास्ता -->
-    <!-- - async . ( multiple things are happening parallel ). tasks runs in backgrounds -->
-    <!-- - non blocking I / O . -->
+# Nodejs : it is single threaded ,async ,non blocking I / O .
+  > Thread = A way to execute Instructions .
+  
+  > single threaded  : Node.js uses only one main thread to handle all client requests.
+
+  > async : Multiple tasks can be started without waiting for previous tasks to finish. 
+
+  > non blocking I / O : Input/Output tasks (like reading file, DB query, API call) run in the background, and meanwhile Node.js can accept new requests.
 
 # NPM: https://www.npmjs.com/
     It is a open source registry where all packages are kept that anyone can try and contribute to the developments .
-
-# packages : supporting library .
+ 
+# packages : it is a supporting library , in Nodejs we have node modules library.
     
 # json : 
     javascript Object Notation .
     Format to represent the data .
     It is array of objects .
+
 Ex : [
         {
             name: "3idiot" ,
@@ -44,6 +52,12 @@ Ex : [
         }
     ]
 
+object : single records but array of objects is multiple records mentioned above.
+     {
+            name: "3idiot" ,
+            type :"education" ,
+            ind : "bollywood"
+        }
 # package.json : 
         This is Entry point to the applications .
         Contains metadata (name,version.descriptions).
@@ -94,7 +108,10 @@ dev
 local host = or = 127.0.0.1: port numbers
 avoid port numbers 8080 
 
-# node is a framework that creates its on server .
+# Node.js is a runtime environment that allows to run    JavaScript outside the browser and also create our own server. .
+# express is a framework that is used in nodejs.
+ > It makes creating servers, handling routes, and using middleware much easier.
+ > If you create a server using only Node.js, you have to write more code. But with Express.js, the same work becomes shorter and simpler.
 
 # nodemon : 
     every time we make change in file or code we need to restart the server to reflect in the browser so nodemon package helps to get over this.
