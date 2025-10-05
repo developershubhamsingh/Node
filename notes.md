@@ -1,3 +1,4 @@
+# ===================Day 1 ==================================
 # All about the node notes : 
 # https://endoflife.date/  
 # https://survey.stackoverflow.co/2025/technology/
@@ -76,7 +77,9 @@ object : single records but array of objects is multiple records mentioned above
    > it tells with which package which dependency came  .
    > it tells which package depends on what .
 
-# for node modules : npm i
+# for node modules : npm i 
+    > node modules is a folder where all the package gets  install .
+# npm i
     > it first installs the main package by checking the package.json then looks for child dependency of the package from the package-lock and then install .
 
 # gitignore : when you push the code to the git it ignores the node module folder .
@@ -95,7 +98,9 @@ dev
     > package which is required at the time of development called as dev dependencies like Logging or for test cases.
     > npm i chai --save-dev 
     > hence node module is heavy folder to avoid the load over that we divide what to install on server wht not to install we differentiate between that .
-      
+
+# ===================Day 2 ==================================
+
 # Basic NodeJS (Inbuilt package in node) (Os,file,http)
 
 # callback function : when we pass function as a parameter in another function .
