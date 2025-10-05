@@ -92,17 +92,37 @@ dev
     NodejS must be installed in laptop
     > go inside the folder using cmd/terminal
     > npm i package name / npm install package@version
-    
+
+# ===================Day 2 ==================================
+
 # for dev dependency
     > npm i package name --save-dev
     > package which is required at the time of development called as dev dependencies like Logging or for test cases.
     > npm i chai --save-dev 
     > hence node module is heavy folder to avoid the load over that we divide what to install on server wht not to install we differentiate between that .
 
-# ===================Day 2 ==================================
-
 # Basic NodeJS (Inbuilt package in node) (Os,file,http)
 
+1 KB = 1024 bytes        
+1 MB = 1024 × 1024 bytes = 1,048,576 bytes
+1 GB =1024 × 1024 × 1024 bytes = 1,073,741,824 bytes
+
+# fs : 
+writefile()
+    > it takes 3 parameters (filename ,data ,callback).
+    > it replace the content when run twice or thrice.
+appendFile()
+    > it takes 3 parameters(filename ,data ,callback).
+    > it adds the new content when run twice or thrice.
+readdFile()
+    > it takes 3 parameters(filename ,encoding ,callback).
+    > callback takes two parameters i.e. (error ,data).
+unlink()
+    > it takes 2 parameters(filename ,no param callback).
+    > But do error handling in callback to track the error because if file is not there even then it sat file deleted. 
+rename()
+    >it takes 3 parameters(oldFilename ,newFilename ,callback).
+    
 # callback function : when we pass function as a parameter in another function .
 
 # Apis : It is a url , developed in backend by any language ,that returns json format of data when hit or calls . 
@@ -113,8 +133,11 @@ dev
 local host = or = 127.0.0.1: port numbers
 avoid port numbers 8080 
 
-# Node.js is a runtime environment that allows to run    JavaScript outside the browser and also create our own server. .
-# express is a framework that is used in nodejs.
+# Node.js is a runtime environment that allows to run    JavaScript outside the browser and also create our own server. 
+
+# Handling Routes with http is difficult so Express is there for creating and handling routes.
+
+# express is a framework that is used in nodejs for creating server and handling routes.
  > It makes creating servers, handling routes, and using middleware much easier.
  > If you create a server using only Node.js, you have to write more code. But with Express.js, the same work becomes shorter and simpler.
 
