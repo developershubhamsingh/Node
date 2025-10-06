@@ -3,7 +3,7 @@
 # https://endoflife.date/  
 # https://survey.stackoverflow.co/2025/technology/
 
-# git bash :through git bash you can push code to github.
+# git bash : through git bash you can push code to github.
 # ctrl + f to search in a file .
 
 git init    
@@ -78,7 +78,7 @@ object : single records but array of objects is multiple records mentioned above
    > it tells which package depends on what .
 
 # for node modules : npm i 
-    > node modules is a folder where all the package gets  install .
+    > node modules is a folder where all the package gets install .
 # npm i
     > it first installs the main package by checking the package.json then looks for child dependency of the package from the package-lock and then install .
 
@@ -114,7 +114,7 @@ writefile()
 appendFile()
     > it takes 3 parameters(filename ,data ,callback).
     > it adds the new content when run twice or thrice.
-readdFile()
+readFile()
     > it takes 3 parameters(filename ,encoding ,callback).
     > callback takes two parameters i.e. (error ,data).
 unlink()
@@ -133,12 +133,12 @@ rename()
 local host = or = 127.0.0.1: port numbers
 avoid port numbers 8080 
 
-# Node.js is a runtime environment that allows to run    JavaScript outside the browser and also create our own server. 
+# Node.js is a runtime environment that allows to run JavaScript outside the browser and also create their own server. 
 
-# Handling Routes with http is difficult so Express is there for creating and handling routes.
+# Handling Routes with http is difficult so Express is there for creating servers and handling routes.
 
 # express is a framework that is used in nodejs for creating server and handling routes.
- > It makes creating servers, handling routes, and using middleware much easier.
+ > It creates servers, handles routes, and using middleware much easier.
  > If you create a server using only Node.js, you have to write more code. But with Express.js, the same work becomes shorter and simpler.
 
 # nodemon : 
@@ -182,7 +182,9 @@ Delete > Remove
 
 => Try express router when dealing with routes . 
 
-=> ejs(embedded js) / swig / pug /vas handle bar are template engine  middleware (i.e.supporting library) for making small application and showing less content with ui .
+# ===================Day 3 ==================================
+
+=> ejs(embedded js) / swig / pug /vas handle bar are template engine middleware (i.e.supporting library) for making small application and showing less content with ui .
 
 => in normal index.js file you cannot binned the data but through ejs you can binned .
 
