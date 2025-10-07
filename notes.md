@@ -232,7 +232,11 @@ MongoDb (NoSql) :
 # MongoDb setups : 
 > Locals.
 > Clouds.
- 
+
+ # Need to install two things : 
+  # > mongo compass : Interface ( i.e GUI).
+  # > mongodb community edition :To start the server .
+
 # connecting mongodb :
   > npm i mongodb
   > create categoryRouter.js in controller .
@@ -246,3 +250,4 @@ MongoDb (NoSql) :
     mongod --port 27018
 
     then change mongoUrl then it will work
+# ===================Day 4 ==================================
