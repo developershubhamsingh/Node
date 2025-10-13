@@ -248,6 +248,5 @@ MongoDb (NoSql) :
     
 <!--agar port change karna ho   -->
     mongod --port 27018
-
     then change mongoUrl then it will work
 # ===================Day 4 ==================================
