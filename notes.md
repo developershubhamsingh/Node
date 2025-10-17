@@ -250,3 +250,13 @@ MongoDb (NoSql) :
     mongod --port 27018
     then change mongoUrl then it will work
 # ===================Day 4 ==================================
+
+#  > Always get the data from database .
+#  > Rare case u get the data from file .
+# params :
+# > what we pass after /(slash).
+# > compulsory to defile in the routes .
+
+# Query params : 
+# > what we pass after ? (que.marks).
+# > no need to defile in the routes its optional.
