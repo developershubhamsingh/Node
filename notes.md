@@ -252,7 +252,7 @@ MongoDb (NoSql) :
 # ===================Day 4 ==================================
 
 #  > Always get the data from database .
-#  > Rare case u get the data from file .
+#  > Rare case w get   data from file .
 # params :
 # > what we pass after /(slash).
 # > compulsory to defile in the routes .
