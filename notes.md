@@ -261,3 +261,10 @@ MongoDb (NoSql) :
 # Query params : 
 # > what we pass after ? (que.marks).
 # > no need to defile in the routes its optional.
+
+# weather apps  : 
+# > key: fbf712a5a83d7305c3cda4ca8fe7ef29
+# > https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&mode=json&units=metric&cnt=5&appid= ${process.env.KEY}
+
+# > key =b8a5e083be34c10a318010d587eb276c
+# > let url = "https://api.openweathermap.org/data/2.5/forecast?q=Delhi,IN&units=metric&appid=b8a5e083be34c10a318010d587eb276c";
