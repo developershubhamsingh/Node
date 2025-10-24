@@ -268,3 +268,29 @@ MongoDb (NoSql) :
 
 # > key =b8a5e083be34c10a318010d587eb276c
 # > let url = "https://api.openweathermap.org/data/2.5/forecast?q=Delhi,IN&units=metric&appid=b8a5e083be34c10a318010d587eb276c";
+
+
+# Babel :
+
+# > Babel is a JavaScript compiler/translator .
+# > It Convert new JavaScript (ES6/ES7+) code into older JavaScript (ES5) so that it can run in older browsers and environments as well.
+
+# Why is it important?
+
+# > JavaScript is updated every year with new features (like arrow functions, let/const, async/await).
+# > Older browsers or Node.js versions cannot understand these new features.
+# > Babel automatically converts modern JS code into an older version, so it works everywhere.
+
+# install few package to work with babel : 
+ # >  npm i @babel/core  @babel/preset-env  @babel/register .
+ # > then create a file .babelrc and write there 
+  {
+    "presets":[
+        "@babel/preset-env"
+     ]
+}
+
+  # > then create a file start.js and write there
+require('babel-register')({});
+module.exports = require('./app.js');
+
