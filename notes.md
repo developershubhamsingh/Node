@@ -294,3 +294,36 @@ MongoDb (NoSql) :
 require('babel-register')({});
 module.exports = require('./app.js');
 
+## mongodb clouds setups: 
+ # > free claster : 
+ # > Username : shubhamsinghhindustan_db_user 
+ # > Password : shubhamsinghhindustan_db_user
+http://cloud.mongodb.com/
+
+> Create Cluster
+
+> Cloud
+* https://www.mongodb.com/
+* try free
+> signup with google
+
+* Network access
+> Add IP 
+> 0.0.0.0/0
+* Database access
+> Create user
+Built-in Role
+> Atlas Admin
+> Add User
+
+mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+   
+ # > Username :   test
+ # > Password :  cigVxikvbvqVZRro 
+ # > mongodb+srv://test:cigVxikvbvqVZRro@cluster0.2qnsmhd.mongodb.net/?appName=Cluster0
+
+
+## email with nodes:
+# nodemailer . : 
+# >  npm i dotenv  nodemailer.
