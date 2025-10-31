@@ -22,7 +22,6 @@ app.set("views", "./src/views")
 // view engine//
 app.set("view engine", "ejs")
 
-// 
 // Get > Retrieve the data
 // default routes .//
 app.get('/', (req, res) => {

@@ -326,4 +326,4 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
 
 ## email with nodes:
 # nodemailer . : 
-# >  npm i dotenv  nodemailer.
+# > npm i dotenv  nodemailer.
