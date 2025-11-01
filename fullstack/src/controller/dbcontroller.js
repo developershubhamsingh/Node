@@ -1,6 +1,7 @@
 let mongodb = require('mongodb');
 let mongoClient = mongodb.MongoClient;
 let mongoUrl = "mongodb://127.0.0.1:27017";
+// let mongoUrl = "mongodb://localhost:27017";
 //default port of mongodb 27017 .
 let db;
 
