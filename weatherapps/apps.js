@@ -1,5 +1,6 @@
 import express from 'express';
-import request from 'request';
+// import request from 'request';
+import axios from 'axios';
 import dotenv from 'dotenv';
 dotenv.config();
 import path from 'path';//path → Node.js ka built-in module, paths handle karne ke liye.
@@ -23,9 +24,9 @@ apps.get("/weather", async (req, res) => {
         let response = await axios.get(url);
         let result = response.data;
         // res.send(result);
-        res.render("index",{title: "Weather", weather: result } );
+        res.render("index", { title: "Weather", result });
     }
-    catch (error) { 
+    catch (error) {
         console.log(error)
     }
 })

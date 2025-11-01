@@ -269,6 +269,28 @@ MongoDb (NoSql) :
 # > key =b8a5e083be34c10a318010d587eb276c
 # > let url = "https://api.openweathermap.org/data/2.5/forecast?q=Delhi,IN&units=metric&appid=b8a5e083be34c10a318010d587eb276c";
 
+# Note: 
+✅ Option 1: Use /forecast (Free plan)
+
+# > यह अगले 5 दिनों का data देता है, हर 3 घंटे पर एक record के साथ।
+# >let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${process.env.key}`;
+
+ # > फिर data access करते समय:
+result.list[i].main.temp
+result.list[i].weather[0].description
+result.list[i].dt_txt
+
+# >✅ Option 2: Use /onecall (For daily forecast)
+
+# >अगर तुम्हें “daily forecast” (हर दिन का data) चाहिए,तो तुम्हें /onecall API यूज़ करना होगा।
+
+# > let url = `https://api.openweathermap.org/data/3.0/onecall?lat=28.6139&lon=77.2090&exclude=minutely,hourly&units=metric&appid=${process.env.key}`;
+
+# > इसमें तुम latitude और longitude पास करते हो,और फिर result में daily data ऐसे मिलता है 👇
+result.daily[i].temp.day
+result.daily[i].temp.min
+result.daily[i].temp.max
+
 
 # Babel :
 
