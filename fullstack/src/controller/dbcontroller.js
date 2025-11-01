@@ -12,7 +12,7 @@ const dbConnect = async () => {
 }
 // getting data from database.//
 const getData = async (colName, query) => {
-    await db.collection(colName).find(query).toArray();
+   return await db.collection(colName).find(query).toArray();
 }
 
 module.exports = {
