@@ -315,11 +315,17 @@ result.daily[i].temp.max
   # > then create a file start.js and write there
 require('babel-register')({});
 module.exports = require('./app.js');
-
+ 
+ # > then change  "scripts": {
+    "script": "node start.js",
+    "dev": "nodemon start.js"
+  }
+  # >adds "main": "start.js",
 ## mongodb clouds setups: 
  # > free claster : 
  # > Username : shubhamsinghhindustan_db_user 
  # > Password : shubhamsinghhindustan_db_user
+ 
 http://cloud.mongodb.com/
 
 > Create Cluster
