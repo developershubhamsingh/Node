@@ -1,17 +1,17 @@
 {
-  "name": "emailwithnodes",
+  "name": "radis",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ",
-    "dev":"nodemon "
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "dotenv": "^17.2.3",
-    "nodemailer": "^7.0.10"
+    "axios": "^1.13.1",
+    "express": "^5.1.0",
+    "redis": "^5.9.0"
   }
 }
