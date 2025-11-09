@@ -360,3 +360,10 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
 # ===================Day 5 ==================================
  # > default Port no of redis :6379 i.e :127.0.0.1:6379
  # > it save data in keys formats.
+
+ # start redis server : 
+   # > open cmd as admin
+   # > cd C:\Program Files\Redis
+   # > redis-server.exe
+   # > again  open cmd 
+   # > redis-cli
