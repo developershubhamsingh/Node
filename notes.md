@@ -367,3 +367,17 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
    # > redis-server.exe
    # > again  open cmd 
    # > redis-cli
+
+# JSON.parse()
+ # > किसी JSON string को JavaScript object में बदल देता है
+    
+    let jsonString = '{"name":"Aman","age":25}';
+    let obj = JSON.parse(jsonString);
+    console.log(obj.name);  // Output: Aman
+
+ # > JSON.stringify()
+ # > किसी JavaScript object को JSON string में बदल देता है।
+
+    let obj = { name: "Aman", age: 25 };
+    let jsonString = JSON.stringify(obj);
+    console.log(jsonString);  // Output: {"name":"Aman","age":25}
