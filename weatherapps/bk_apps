@@ -16,7 +16,7 @@ apps.get("/weather", async (req, res) => {
         let response = await axios.get(url);
         let result = response.data;
         res.send(result)
-        res.render()
+        res.render("ind")
     }
     catch (error) {
         console.log(error);

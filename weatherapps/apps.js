@@ -28,6 +28,7 @@ apps.get("/weather", async (req, res) => {
     }
     catch (error) {
         console.log(error)
+        res.send("Error occurred while fetching weather data.");
     }
 })
 
