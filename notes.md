@@ -368,16 +368,45 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
    # > again  open cmd 
    # > redis-cli
 
+ # >JavaScript object: 
+   यह key–value pair में डेटा रखता है, और इसमें functions भी हो सकते हैं।
+   ex: 
+   let user = {
+    name: "Rahul",
+    age: 25,
+    isActive: true
+};
+
+ # > JSON string : 
+👉यह सिर्फ string format में data होता है ।
+   इसे server पर भेजते हैं
+   API response में मिलता है
+   फाइलों में data store करने के लिए उपयोग होता है
+
+  ex : "{\"name\":\"Rahul\",\"age\":25,\"isActive\":true}"
+ 
 # JSON.parse()
  # > किसी JSON string को JavaScript object में बदल देता है
-    
+ # >ये ज़्यादातर API से आने वाले data को object बनाने में उपयोग होता है।
     let jsonString = '{"name":"Aman","age":25}';
     let obj = JSON.parse(jsonString);
     console.log(obj.name);  // Output: Aman
 
  # > JSON.stringify()
- # > किसी JavaScript object को JSON string में बदल देता है।
-
+ # >किसी JavaScript object को JSON string में बदल देता हैताकि:।
+ # > उसे API द्वारा server पर भेज सकें
+ # > उसे file/database में save कर सकें
+ # > उसे इंटरनेट पर ट्रांसफर कर सकें
+ ex:
     let obj = { name: "Aman", age: 25 };
     let jsonString = JSON.stringify(obj);
-    console.log(jsonString);  // Output: {"name":"Aman","age":25}
+    console.log(jsonString); 
+     // Output: {"name":"Aman","age":25}
+
+# Async–Await ?
+API call (axios, fetch)
+Database query (MongoDB, MySQL)
+Redis operations
+File read/write
+setTimeout, promises
+# >Async–await is used for any task that takes time to complete.

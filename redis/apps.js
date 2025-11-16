@@ -14,6 +14,7 @@ let client = createClient({
 client.on("error", (error) => {
     console.error("Redis Client Error", error);
 });
+
 apps.get("/data", async (req, res) => {
     await client.connect(); ///when connection gets created  it automatically established connection to redis server.
     let city = req.query.city ? req.query.city.trim() : "delhi";
@@ -44,6 +45,28 @@ apps.listen(ports, (err) => {
 // key: fbf712a5a83d7305c3cda4ca8fe7ef29
 // https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&mode=json&units=metric&cnt=5&appid= ${process.env.KEY}
 
+// for learning//
+// const redis = require("redis");
+// const client = redis.createClient();
+
+// client.on("connect", () => {
+//     console.log("Redis connected successfully");
+// });
+
+// client.on("ready", () => {
+//     console.log("Redis client is ready to use");
+// });
+
+// client.on("error", (error) => {
+//     console.error("Redis Client Error:", error);
+// });
+
+// client.on("end", () => {
+//     console.log("Redis connection closed");
+// });
+
+// // actual connection
+// client.connect();
 
 
 
