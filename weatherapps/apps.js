@@ -3,11 +3,13 @@ import express from 'express';
 import axios from 'axios';
 import dotenv from 'dotenv';
 dotenv.config();
-import path from 'path';//path → Node.js ka built-in module, paths handle karne ke liye.
-import { fileURLToPath } from 'url';//fileURLToPath → ES module me current file ka URL ko path me convert karta hai.
 
-const __filename = fileURLToPath(import.meta.url);//import.meta.url → Current ES module file ka URL deta hai, jaise:
-const __dirname = path.dirname(__filename);//fileURLToPath → Is URL ko normal Windows/Linux path me convert kar deta hai:
+// try to write these 👇 four lins it will work no need to install and write code for babel n all. 
+//import path from 'path';//path → Node.js ka built-in module, paths handle karne ke liye.
+//import { fileURLToPath } from 'url';//fileURLToPath → ES module me current file ka URL ko path me convert karta hai.
+
+// const __filename = fileURLToPath(import.meta.url);//import.meta.url → Current ES module file ka URL deta hai, jaise:
+// const __dirname = path.dirname(__filename);//fileURLToPath → Is URL ko normal Windows/Linux path me convert kar deta hai:
 
 
 let apps = express();
@@ -33,9 +35,10 @@ apps.get("/weather", async (req, res) => {
 })
 
 
-apps.listen(port, (error) => {
-    if (error) throw error;
+apps.listen(port, () => {
     console.log("Weather Apps server is running on port " + port);
+}).on("error", (error) => {
+    console.log("problem in running Weather Apps server",error);
 })
 // fbf712a5a83d7305c3cda4ca8fe7ef29
 // https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&mode=json&units=metric&cnt=5&appid= ${process.env.KEY}
