@@ -1,7 +1,6 @@
 import express from "express";
 import axios from "axios";
 import { createClient } from "redis";
-
 let apps = express();
 let port = 7000;
 
@@ -12,41 +11,35 @@ let client = createClient({
         port: 6379
     }
 })
-// handling error//
-client.on("error", (error) => {
-    console.log("Client Error", error.massage)
-})
-
-//connecting client //
+// connecting client//
 await client.connect();
 
 apps.get("/", async (req, res) => {
     let city = req.query.city ? req.query.city.trim() : "Delhi";
     let url = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
-    //checking wether data exist in memory or not//
+    //checking in redis//
     let cacheData = await client.get(city);
     if (cacheData) {
-        let output = JSON.parse(cacheData);
-        res.send(output)
-    }else{
-         // if data not there in the memory//
-    // calling api 
-    let apiResponse = await axios.get(url);
-    let result = apiResponse.data;
-    //first storing data in redis
-    await client.set(city, JSON.stringify({ source: "Redis Cache", result }), { EX: 3600, NE: true })
-    res.send({ source: "Api", result })
+        let result = JSON.parse(cacheData)
+        res.send(result)
+    } else {
+        // call apis //
+        let apiResponse = await axios.get(url);
+        let apiOutput = apiResponse.data;
+        //first saving in redis .//
+        await client.set(city, JSON.stringify({ source: "Redis Cache", apiOutput }), { EX: 3600, NX: true })
+        res.send({ source: "Api", apiOutput })
     }
-   
 })
 
 process.on("SIGINT", async () => {
     await client.quit();
-    process.exit(0);
-});
-apps.listen(port, () => {
-    console.log("Server is Running on port ", port)
+    process.quit(0);
 })
-    .on("error", () => {
-        console.log("Problem in Starting Server")
-    })
+
+
+apps.listen(port, () => {
+    console.log("server is running in port", port);
+}).on("error", (error) => {
+    console.log("problem in starting server")
+})
