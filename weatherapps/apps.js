@@ -4,7 +4,7 @@ import axios from 'axios';
 import dotenv from 'dotenv';
 dotenv.config();
 
-// try to write these 👇 four lins it will work no need to install and write code for babel n all. 
+//try to write these 👇 four lins it will work no need to install and write code for babel n all. 
 //import path from 'path';//path → Node.js ka built-in module, paths handle karne ke liye.
 //import { fileURLToPath } from 'url';//fileURLToPath → ES module me current file ka URL ko path me convert karta hai.
 

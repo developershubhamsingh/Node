@@ -167,6 +167,12 @@ avoid port numbers 8080
             "start": "node aps.js",
             "dev": "nodemon aps.js"
         }
+# Express.js → Server बनाता है
+Routes बनाना
+APIs बनाना
+Request–Response handle करना
+Backend की पूरी structure बनाना
+Express = Server
 
 # CRUD
 Create Read Update Delete
@@ -358,6 +364,10 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
 
 
 # ===================Day 5 ==================================
+# Redis :
+# > redis ek temporary db hai  
+# > zo bas defined time ke liye data ko cacheing memory yani ki u ser ki  ram me data ko store karta hai 
+
  # > default Port no of redis :6379 i.e :127.0.0.1:6379
  # > it save data in keys formats.
 
@@ -410,3 +420,8 @@ Redis operations
 File read/write
 setTimeout, promises
 # >Async–await is used for any task that takes time to complete.
+
+# Axios → 3rd Party API से Data Fetch करने के लिए 
+External API से data लाने के लिए
+अपने server से दूसरे server को request भेजने के लिए
+Ex :const data = await axios.get("https://api.example.com/users");
