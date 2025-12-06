@@ -1,10 +1,10 @@
 {
   "name": "emailwithnodes",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "apps.js",
   "scripts": {
-    "start": "node ",
-    "dev":"nodemon "
+    "start": "node apps.js",
+    "dev": "nodemon apps.js"
   },
   "keywords": [],
   "author": "",

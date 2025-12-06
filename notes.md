@@ -425,3 +425,58 @@ setTimeout, promises
 External API से data लाने के लिए
 अपने server से दूसरे server को request भेजने के लिए
 Ex :const data = await axios.get("https://api.example.com/users");
+
+### ✅ Nodemailer :
+ 
+# > Nodemailer is a Node.js module used to send emails from your server.
+
+# When is Nodemailer used?
+1) OTP / Verification Email
+Sending a 6-digit OTP to the user during login or signup.
+
+2) Password Reset Email
+Sending a password-reset link when the user clicks “Forgot Password”.
+
+3) Welcome Emails
+Sending a welcome message right after a user signs up.
+
+4) Order Confirmation / Invoice Email
+Used in e-commerce websites to send order details or invoices.
+
+5) Contact Form Submissions
+When a user fills a contact form, the message is sent to your email inbox.
+
+6) System Alerts / Notifications
+Automatically sending notifications from the server, such as:
+“Low Memory”
+“Error Occurred”
+“Server Warning 
+
+# > > const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: gmail,
+        pass: smtp key 
+    }
+})
+# > ab gmail app password option disable kr diya hai zo ki SMTP key hota hai   
+ auth {
+     user:gmail ,
+     pass: no app password  (i.e no smtp key without this email cannot be sent ).
+     }
+# >> Better to go with Resend API Key sign up and generate key safe fully https://resend.com/onboarding .
+# >> whe going with resend the go with syntax (there will be no services only host port auth ): 
+const transporter = nodemailer.createTransport({
+  host: "smtp.resend.com",
+  port: 587,       // TLS recommended
+  secure: false,   // false because 587 uses STARTTLS 
+  auth: {
+    user: "resend",
+    pass: process.env.RESEND_API_KEY
+  }
+  noneed to write secure Nodemailer automatically secure: false मान लेगा क्योंकि port 587 है
+});
+
+
+ 
+
