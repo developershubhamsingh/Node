@@ -1,26 +1,27 @@
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 dotenv.config();
 
 const transporter = nodemailer.createTransport({
-    service: "gmail.com",
+    host: "smtp.resend.com",
+    port: 587,//default port//
     auth: {
-        user: process.env.GMAIL,
-        pass: process.env.PASS,
+        user: "resend",//default user//
+        pass: process.env.PASS_KEY//smtp keys//
     }
 })
 
 const mailOptions = {
     from: process.env.GMAIL,
-    to: process.env.SENDEMAILSTO,
-    subject: "Nodemailer testings",
-    text: "Test mail from node"
+    to: process.env.SEND_EMAILS_TO,
+    subject: "Resend smtp Test",
+    text: "Email successfully sent using Resend SMTP + Nodemailer!"
 }
 
-transporter.sendMail(mailOptions, (err, info) => {
-    if (err) {
-        console.log("Error occurred cannot send mails .", err)
+transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        console.log("❌ Error occurred:", error);
     } else {
-        console.log(" Emails sent.", info.response)
+        console.log("✅ Email sent:", info.response);
     }
-})
+});

@@ -477,6 +477,14 @@ const transporter = nodemailer.createTransport({
   noneed to write secure Nodemailer automatically secure: false मान लेगा क्योंकि port 587 है
 });
 
+### > imageuploads (with multer):
+# > Multer का काम = Node.js में फ़ाइल Upload करवाना (जैसे Image, PDF, Video वगैरह)।
 
- 
+# > जब कोई user form में file भेजता है:
+ >> तो ये data साधारण JSON नहीं होता।
+ >> इसे Express समझ नहीं पाता।
 
+👉 Multer इस "multipart/form-data" को पढ़ने और files को server में save करने का काम करता है।
+
+>> Earlier images were saved in the database .
+>> But now we save it in a folder or uploading it to the object storage i.e s3bucket (AWS) etc.
