@@ -366,7 +366,7 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
 # ===================Day 5 ==================================
 # Redis :
 # > redis ek temporary db hai  
-# > zo bas defined time ke liye data ko cacheing memory yani ki u ser ki  ram me data ko store karta hai 
+# > zo bas defined time ke liye data ko caching memory yani ki u ser ki  ram me data ko store karta hai 
 
  # > default Port no of redis :6379 i.e :127.0.0.1:6379
  # > it save data in keys formats.

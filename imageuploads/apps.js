@@ -1,8 +1,6 @@
-import e from "express";
 import express from "express";
 import multer from "multer";
 import path from "path";
-import { report } from "process";
 import { fileURLToPath } from "url";
 
 const apps = express();
@@ -11,7 +9,7 @@ const port = process.env.PORT || 7000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
+//view engine
 apps.set("view engine", "ejs");
 // “👇👇It tells Express to decode the incoming form data and store it inside req.body.”
 //Form ka data Express read karega aur req.body me store karega.
