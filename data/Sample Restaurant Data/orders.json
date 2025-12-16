@@ -1,4 +1,5 @@
-db.orders.insert([
+db.orders.insert(
+[
     {
         "_id": "62514d42f5aec503b2e0f2a9",
         "name": "Aakash",

@@ -1,5 +1,6 @@
 
-db.restaurants.insert([
+db.restaurants.insert(
+[
   {
     "restaurant_id": 1,
     "restaurant_name": "Domino's Pizza",

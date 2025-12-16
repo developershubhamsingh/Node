@@ -489,7 +489,6 @@ const transporter = nodemailer.createTransport({
 >> Earlier images were saved in the database .
 >> But now we save it in a folder or uploading it to the object storage i.e s3bucket (AWS) etc.
 # ===================Day 6 ==================================
-# > APIS with nodejs : 
 # headings style 
 **For bold**
 **_bold itali_**
@@ -497,4 +496,31 @@ const transporter = nodemailer.createTransport({
 *hello*
 **hello**
 **_hello_**
- 
+
+# > APIS with nodejs : 
+
+**cors क्या करता है ?**
+`cors → Cross origin request sharing`
+`Browser को permission देता है कि frontend backend से बात कर सकता है`
+
+**Problem क्या होती है?**
+`मान लो:Frontend → http://localhost:3000`
+`Backend → http://localhost:7000`
+`Browser बोलता है:“Different origin है, data share नहीं कर सकते”`
+
+**swagger-jsdoc → API documentation generate करता है**
+**यह आपके code से API documentation generate करता है यानि comments पढ़कर API समझता है।**
+
+**swagger-ui-express → API docs को browser UI में दिखाता है**
+**यह वही API documentation को beautiful UI में browser पर दिखाता है**
+
+**_package_:npm i dotenv express mongodb cors swagger-jsdoc swagger-ui-express**
+
+**http statas code**
+**_200 :_ OK सब सही है (Example: data fetch हुआ)**
+**_201 :_Created नया data बन गया (POST से कुछ create हुआ)**
+**_400 :_Bad Request (तुमने गलत data भेजा)**
+**_401 :_Unauthorized  (पहले login करो Token / auth नहीं है)**
+**_403 :_Forbidden (Access allowed नहीं है)**
+**_404 :_Not Found(जो माँगा वोनहीं मिलाURLया resource गलत)**
+**_500 :_Internal Server (Server में problem है Code crash / exception)**

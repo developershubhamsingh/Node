@@ -1,5 +1,6 @@
 
-db.mealType.insert([
+db.mealType.insert(
+[
     {
         "mealtype_id": 1,
         "mealtype": "Breakfast",
