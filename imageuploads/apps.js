@@ -44,7 +44,7 @@ const fileFilter = (req, file, cb) => {
 }
 
 // if don't want any filter n all then only write it as :
-// const upload = multer()
+// const upload = multer(storage)
 
 const upload = multer({
     //destructuring can be done also //
@@ -56,7 +56,9 @@ const upload = multer({
 apps.get("/", (req, res) => {
     res.render("index")
 })
-
+//जब आप Multer का इस्तेमाल करते हो:
+//uploads.single("image")
+//तो Multer उस फ़ाइल को पढ़कर req.file में रख देता है।
 apps.post("/uploads", upload.single("image"), (req, res) => {
     if (!req.file) {
         return res.status(404).send("No File uploaded")

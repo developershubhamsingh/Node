@@ -488,3 +488,9 @@ const transporter = nodemailer.createTransport({
 
 >> Earlier images were saved in the database .
 >> But now we save it in a folder or uploading it to the object storage i.e s3bucket (AWS) etc.
+# ===================Day 6 ==================================
+# > APIS with nodejs : 
+# style 
+**For bold**
+**_bold itali_**
+`color`
