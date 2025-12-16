@@ -490,7 +490,11 @@ const transporter = nodemailer.createTransport({
 >> But now we save it in a folder or uploading it to the object storage i.e s3bucket (AWS) etc.
 # ===================Day 6 ==================================
 # > APIS with nodejs : 
-# style 
+# headings style 
 **For bold**
 **_bold itali_**
 `color`
+*hello*
+**hello**
+**_hello_**
+ 
