@@ -1,7 +1,7 @@
 // import mongodb from "mongodb";
 // const mongoClient = mongodb.MongoClient;
 //modern way//
-import {MongoClient} from "mongodb";
+import { MongoClient } from "mongodb";
 import dotenv from 'dotenv';
 dotenv.config();
 const mongoUrl = process.env.MONGO_URL;
@@ -17,9 +17,22 @@ const dbConnect = async () => {
         console.log("Database connection failed.");
     }
 }
+// Either use this code to get the data👇:
+// const getData = async (colName, query) => {
+//     return await db.collection(colName).find(query).toArray();
+// }
+// Or else use this code to get the data👇:
+
 const getData = async (colName, query) => {
-    return await db.collection(colName).find(query).toArray();
+    let result;
+    try {
+        result = await db.collection(colName).find(query).toArray();
+    } catch (error) {
+        console.log("Error in getting data:", error);
+    }
+    return result;
 }
+
 export {
     dbConnect,
     getData

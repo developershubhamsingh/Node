@@ -1,8 +1,12 @@
 **Home page (page 1):**
 > `List of All City(GET)`
+>  http://localhost:7000/location
 > `List of All Restaurant(GET)`
+>  http://localhost:7000/restaurents
 > `Restaurant WRT City(GET)`
+>  http://localhost:7000/restaurents?stateId=2
 > `List of All Meal(GET)`
+>  http://localhost:7000/mealTypes
 
 **Listing page (page 2):**
 > `Restaurant WRT MealTypes(GET)`
@@ -13,6 +17,7 @@
 
 **Details page (page 3):**
 > `Details of Restaurant WRT ID(GET)`
+>  http://localhost:7000/details/3
 > `Menu WRT Restaurant(GET)`
 
 **page 4 :**
