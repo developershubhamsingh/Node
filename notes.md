@@ -488,7 +488,7 @@ const transporter = nodemailer.createTransport({
 
 >> Earlier images were saved in the database .
 >> But now we save it in a folder or uploading it to the object storage i.e s3bucket (AWS) etc.
-# ===================Day 6 ==================================
+# =================== Day 6 ==================================
 # headings style 
 **For bold**
 **_bold itali_**
@@ -524,3 +524,4 @@ const transporter = nodemailer.createTransport({
 **_403 :_Forbidden (Access allowed नहीं है)**
 **_404 :_Not Found(जो माँगा वोनहीं मिलाURLया resource गलत)**
 **_500 :_Internal Server (Server में problem है Code crash / exception)**
+# =================== Day 7 ==================================
