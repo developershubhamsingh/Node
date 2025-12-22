@@ -65,8 +65,8 @@ apps.post("/uploads", upload.single("image"), (req, res) => {
     }
     const name = req.body.name
     const imagePath = `/uploads/${req.file.filename}`
-    // res.render("success", { name, imagePath })
-    res.send(`success, ${name},${imagePath}`)
+    // res.status(200).send("success", { name, imagePath })
+    res.status(200).render("success", { name, imagePath })
 
 })
 apps.listen(port, () => {
