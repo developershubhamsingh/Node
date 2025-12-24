@@ -72,7 +72,7 @@ apps.post("/uploads", upload.single("image"), async (req, res) => {
     let data = {
         name: req.body.name,
         imagePath: `/uploads/${req.file.filename}`,
-        createdAt: Date.now()
+        createdAt: new Date()
     }
     try {
         await saveData("images", data)
