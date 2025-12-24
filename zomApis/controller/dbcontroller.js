@@ -32,7 +32,7 @@ const getData = async (colName, query) => {
     }
     return result;
 }
-
+ 
 export {
     dbConnect,
     getData

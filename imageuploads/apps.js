@@ -1,5 +1,6 @@
 import express from "express";
 import multer from "multer";
+import { dbConnect, saveData } from "./dbConnect.js"
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -59,16 +60,32 @@ apps.get("/", (req, res) => {
 //जब आप Multer का इस्तेमाल करते हो:
 //uploads.single("image")
 //तो Multer उस फ़ाइल को पढ़कर req.file में रख देता है।
-apps.post("/uploads", upload.single("image"), (req, res) => {
+apps.post("/uploads", upload.single("image"), async (req, res) => {
     if (!req.file) {
         return res.status(404).send("No File uploaded")
     }
-    const name = req.body.name
-    const imagePath = `/uploads/${req.file.filename}`
-    // res.status(200).send("success", { name, imagePath })
-    res.status(200).render("success", { name, imagePath })
-
+    // const name = req.body.name
+    // const imagePath = `/uploads/${req.file.filename}`
+    // // res.status(200).send("success", { name, imagePath })
+    // res.status(200).render("success", { name, imagePath })
+    //>uploading to database with dbConnect .
+    let data = {
+        name: req.body.name,
+        imagePath: `/uploads/${req.file.filename}`,
+        createdAt: Date.now()
+    }
+    try {
+        await saveData("images", data)
+        console.log("Images are uploaded in the Database")
+    } catch (error) {
+        console.error("Problem Occurred in uploading Images in the Database")
+    }
+    res.render("success", data)
 })
+
 apps.listen(port, () => {
     console.log("Server Running on port", port)
+    dbConnect();
+}).on("error", (error) => {
+    console.error("Problem Occurred in Running Server", error)
 })
