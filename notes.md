@@ -286,7 +286,7 @@ result.list[i].main.temp
 result.list[i].weather[0].description
 result.list[i].dt_txt
 
-# >✅ Option 2: Use /onecall (For daily forecast)
+# >✅ Option 2: Use /one call (For daily forecast)
 
 # >अगर तुम्हें “daily forecast” (हर दिन का data) चाहिए,तो तुम्हें /onecall API यूज़ करना होगा।
 
