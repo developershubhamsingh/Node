@@ -137,6 +137,8 @@ avoid port numbers 8080
 
 # Handling Routes with http is difficult so Express is there for creating servers and handling routes.
 
+# Express.js ek lightweight Node.js framework hai jo server, routing, middleware aur API development ko easy banata hai.
+
 # express is a framework that is used in nodejs for creating server and handling routes.
  > It creates servers, handles routes, and using middleware much easier.
  > If you create a server using only Node.js, you have to write more code. But with Express.js, the same work becomes shorter and simpler.
