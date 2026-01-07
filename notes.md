@@ -503,8 +503,8 @@ const transporter = nodemailer.createTransport({
 
 **cors क्या करता है ?**
 `cors → Cross origin request sharing`
-`Browser को permission देता है कि frontend backend से बात कर सकता है`
-
+`CORS tells the browser whether a website is allowed to talk to another server or not.`
+`CORS is a browser security rule that allows or blocks a frontend website from accessing a backend server, based on permission sent by the backend.`
 **Problem क्या होती है?**
 `मान लो:Frontend → http://localhost:3000`
 `Backend → http://localhost:7000`
