@@ -366,9 +366,16 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
 
 
 # ===================Day 5 ==================================
+# Application ------ Redis ------- database .
+ # > when user search for data  --> it application first check the redis (if data is not there ) --> then it will go database --> it takes the data stores it to the redis --> return back to the Applications.-->so that next time accessing to the data will be faster  .
+
+ # NOTE: When a user requests data, the application first checks Redis If the data is not found in Redis, it fetches the data from the database, stores it in Redis, and then returns it to the application.Next time, the data is served directly from Redis, making access faster.
+
 # Redis :
-# > redis ek temporary db hai  
-# > zo bas defined time ke liye data ko caching memory yani ki u ser ki  ram me data ko store karta hai 
+# > Redis acts as a cache between the application and the database to improve performance and reduce database load.
+ 
+# Caching Memory :
+# > Caching memory stores frequently used data temporarily so it can be accessed faster next time.
 
  # > default Port no of redis :6379 i.e :127.0.0.1:6379
  # > it save data in keys formats.
@@ -379,6 +386,24 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
    # > redis-server.exe
    # > again  open cmd 
    # > redis-cli
+
+# This is how we store data :
+# > set  keyname  value 
+# > set  keyname  value EX
+# > get  keyname i.e(to see the data).
+# > del  keyname i.e(to delete the data).
+# > FLUSHALL i.e( delete all keys together at once)
+
+# > Note : because of cost effectiveness it does not have database and it does not stores data in collections it is towards data in key and value pairs that's why Redis is not used everywhere in the application and MongoDB is preferred.
+
+# data will stay forever if not giving expiry time i.e(EX).
+# > set  keyname  value 
+# > set  forever "allTime" 
+
+# data will be saved for 30seconds.
+# > set  keyname  value EX
+# > set test "testdata" EX 30
+ # > Note : here set is a keyword test is lucky name test data is a key value and EX expiry time in 30 seconds.
 
  # >JavaScript object: 
    यह key–value pair में डेटा रखता है, और इसमें functions भी हो सकते हैं।
