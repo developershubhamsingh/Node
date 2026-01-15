@@ -176,6 +176,10 @@ Request–Response handle करना
 Backend की पूरी structure बनाना
 Express = Server
 
+# A route in Express is defined by the HTTP method and the path; changing the path creates a new route.
+
+# In Express, a route that returns data (JSON) is considered an API endpoint.
+
 # CRUD
 Create Read Update Delete
 
