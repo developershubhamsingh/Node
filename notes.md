@@ -547,6 +547,16 @@ const transporter = nodemailer.createTransport({
 
 **_package_:npm i dotenv express mongodb cors swagger-jsdoc swagger-ui-express**
 
+
+// // this is how earlier we parse the data //
+// import bodyParser from 'body-parser';
+// apps.use(bodyParser.urlencoded({ extended: true }));
+// apps.use(bodyParser.json());
+
+// // this is how we parse the data now//
+//apps.use(express.json());
+//express have install body parser by default //
+
 **http statas code**
 **_200 :_ OK सब सही है (Example: data fetch हुआ)**
 **_201 :_Created नया data बन गया (POST से कुछ create हुआ)**
@@ -555,6 +565,9 @@ const transporter = nodemailer.createTransport({
 **_403 :_Forbidden (Access allowed नहीं है)**
 **_404 :_Not Found(जो माँगा वोनहीं मिलाURLया resource गलत)**
 **_500 :_Internal Server (Server में problem है Code crash / exception)**
+
+# See recordings 4 basic authentication //
+
 GET कब लिखते हैं?
 👉 जब सिर्फ पेज या डेटा देखना हो,
 👉 कुछ save / upload नहीं करना हो
