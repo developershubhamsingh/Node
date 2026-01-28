@@ -392,6 +392,7 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
    # > redis-cli
 
 # This is how we store data :
+# > keys * (to see all the key)
 # > set  keyname  value 
 # > set  keyname  value EX
 # > get  keyname i.e(to see the data).
