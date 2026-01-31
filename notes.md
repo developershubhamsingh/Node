@@ -585,8 +585,11 @@ url=     http://    localhost:    7000
 // apps.use(bodyParser.json());
 
 // // this is how we parse the data now//
-//apps.use(express.json());
 //express have install body parser by default //
+// Browser या client से आने वाला JSON data पढ़ता है
+> apps.use(express.json())
+// HTML forms या x-www-form-urlencoded data पढ़ता है//
+> apps.use(express.urlencoded({ extended: true }))
 
 **http statas code**
 **_200 :_Success सब सही है (Example: data fetch हुआ)**
