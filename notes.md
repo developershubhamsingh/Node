@@ -533,12 +533,41 @@ const transporter = nodemailer.createTransport({
 
 **cors क्या करता है ?**
 `cors → Cross origin request sharing`
-`CORS tells the browser whether a website is allowed to talk to another server or not.`
+`CORS tells the browser whether a website is allowed to talk to another wesite server or not.`
+
+`CORS browser को ये decide करने में मदद करता है कि एक website दूसरी website के server से data ले सकती है या नहीं।`
+
 `CORS is a browser security rule that allows or blocks a frontend website from accessing a backend server, based on permission sent by the backend.`
+
 **Problem क्या होती है?**
 `मान लो:Frontend → http://localhost:3000`
 `Backend → http://localhost:7000`
 `Browser बोलता है:“Different origin है, data share नहीं कर सकते”`
+
+Origin = Protocol + Host + Port
+
+# > npm install cors ;
+# Basic Allow All
+> app.use(cors()); // sabko allow
+
+# Sirf React app ko allow
+>app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
+
+#  Multiple Frontend Allow
+> app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://mywebsite.com"
+    ]
+  })
+);
+
+
 
 **swagger-jsdoc → API documentation generate करता है**
 **यह आपके code से API documentation generate करता है यानि comments पढ़कर API समझता है।**
@@ -560,7 +589,7 @@ const transporter = nodemailer.createTransport({
 
 **http statas code**
 **_200 :_ OK सब सही है (Example: data fetch हुआ)**
-**_201 :_Created नया data बन गया (POST से कुछ create हुआ)**
+**_201 :ok _Created नया data बन गया (POST से कुछ create हुआ)**
 **_400 :_Bad Request (तुमने गलत data भेजा)**
 **_401 :_Unauthorized  (पहले login करो Token / auth नहीं है)**
 **_403 :_Forbidden (Access allowed नहीं है)**
