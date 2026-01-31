@@ -544,8 +544,9 @@ const transporter = nodemailer.createTransport({
 `Backend → http://localhost:7000`
 `Browser बोलता है:“Different origin है, data share नहीं कर सकते”`
 
-Origin = Protocol + Host + Port
-
+Origin = Protocol + Host/Domain + Port
+url=     http://    localhost:    7000
+ 
 # > npm install cors ;
 # Basic Allow All
 > app.use(cors()); // sabko allow
@@ -588,8 +589,8 @@ Origin = Protocol + Host + Port
 //express have install body parser by default //
 
 **http statas code**
-**_200 :_ OK सब सही है (Example: data fetch हुआ)**
-**_201 :ok _Created नया data बन गया (POST से कुछ create हुआ)**
+**_200 :_Success सब सही है (Example: data fetch हुआ)**
+**_201 :_Created नया data बन गया (POST से कुछ create हुआ)**
 **_400 :_Bad Request (तुमने गलत data भेजा)**
 **_401 :_Unauthorized  (पहले login करो Token / auth नहीं है)**
 **_403 :_Forbidden (Access allowed नहीं है)**
