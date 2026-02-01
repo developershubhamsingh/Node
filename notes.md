@@ -623,4 +623,4 @@ Image upload
 # =================== Day 7==================================
 
 # =================== Day 7==================================
-02 hr 05 min redis mongo task recording fifth.
+02 hr 05 min redis mongo task recording fifth. 
