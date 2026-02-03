@@ -600,7 +600,6 @@ url=     http://    localhost:    7000
 **_404 :_Not Found(जो माँगा वोनहीं मिलाURLया resource गलत)**
 **_500 :_Internal Server (Server में problem है Code crash / exception)**
 
-# See recordings 4 basic authentication //
 
 GET कब लिखते हैं?
 👉 जब सिर्फ पेज या डेटा देखना हो,
