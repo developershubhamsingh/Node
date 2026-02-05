@@ -1,4 +1,5 @@
 # ===================Day 1 ==================================
+# atlas link :mongodb+srv://admin:admin@cluster0.lxsabqh.mongodb.net/
 # All about the node notes : 
 # https://endoflife.date/  
 # https://survey.stackoverflow.co/2025/technology/
