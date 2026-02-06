@@ -66,7 +66,7 @@ apps.get("/mealTypes", async (req, res) => {
     let result = await getData("mealTypes", query);
     res.status(200).send(result);
 })
-//restaurants details
+> `Details of Restaurant WRT ID(GET)`
 apps.get("/details/:id", async (req, res) => {
     let query = {}; 
     let restId = req.params.id;
