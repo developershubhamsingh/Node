@@ -41,7 +41,7 @@ const basicAuth = (req, res, next) => {
 
 //heartbeat route
 apps.get("/", (req, res) => {
-    res.status(200).send("Server is up and running ");
+    res.status(200).send("Heartbeat is up and running !");
 })
 // without authentication
 // get all cities api // 
@@ -50,14 +50,14 @@ apps.get("/location", async (req, res) => {
     let result = await getData("location", query);
     res.status(200).send(result);
 })
-// get all restaurants api //
-apps.get("/restaurents", async (req, res) => {
+// get all restaurants api and restaurants wrt stateId//
+apps.get("/restaurants", async (req, res) => {
     let query = {};
     let stateId = Number(req.query.stateId)
     if (stateId) {
         query = { state_id: stateId };
     }
-    let result = await getData("restaurents", query);
+    let result = await getData("restaurants", query);
     res.status(200).send(result);
 })
 // get all mealTypes api //
@@ -68,14 +68,13 @@ apps.get("/mealTypes", async (req, res) => {
 })
 //restaurants details
 apps.get("/details/:id", async (req, res) => {
-    let query = {};
+    let query = {}; 
     let restId = req.params.id;
     if (restId) {
         query =
-            { restaurant_id:Number(restId) };
+           ( { "restaurant_id": Number(restId) });
     }
-
-    let result = await getData("restaurents", query);
+    let result = await getData("restaurants", query);
     res.status(200).send(result);
 })
 
