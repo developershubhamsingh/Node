@@ -6,7 +6,7 @@ import { dbConnect, getData } from './controller/dbcontroller.js';
 import { ObjectId } from 'mongodb';
 // import bodyParser from 'body-parser';
 const apps = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const key = process.env.AUTH_KEY;
 
 const VALID_USERNAME = process.env.VALID_USERNAME || 'admin';
@@ -43,6 +43,8 @@ const basicAuth = (req, res, next) => {
 apps.get("/", (req, res) => {
     res.status(200).send("Heartbeat is up and running !");
 })
+//====================**Home page (page 1):**=================//
+
 // without authentication
 // get all cities api // 
 apps.get("/location", async (req, res) => {
@@ -66,13 +68,13 @@ apps.get("/mealTypes", async (req, res) => {
     let result = await getData("mealTypes", query);
     res.status(200).send(result);
 })
-> `Details of Restaurant WRT ID(GET)`
+// > `Details of Restaurant WRT ID(GET)`
 apps.get("/details/:id", async (req, res) => {
-    let query = {}; 
+    let query = {};
     let restId = req.params.id;
     if (restId) {
         query =
-           ( { "restaurant_id": Number(restId) });
+            ({ "restaurant_id": Number(restId) });
     }
     let result = await getData("restaurants", query);
     res.status(200).send(result);
@@ -96,11 +98,11 @@ apps.get("/details/:id", async (req, res) => {
 //         res.status(401).send("Unauthorized Access");
 //     }
 // });
+// ===============================================================//
 
-await dbConnect();
-
-apps.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+apps.listen(port, () => {
+    dbConnect();
+    console.log(`Server is running on port ${port}`);
 }).on('error', (err) => {
     console.error('Error starting server:', err);
 });  
