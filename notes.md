@@ -111,18 +111,24 @@ dev
 # fs : 
 writefile()
     > it takes 3 parameters (filename ,data ,callback).
-    > it replace the content when run twice or thrice.
+    > The writeFile() method is used to create a new file and write content to it.
+    > If the file already exists, it will be overwritten..
 appendFile()
     > it takes 3 parameters(filename ,data ,callback).
-    > it adds the new content when run twice or thrice.
+    > The appendFile() method is used to add content to an existing file.
+    > If the file does not exist, it will be created.
+    > it will keep adding the content no of times the file will run.
 readFile()
     > it takes 3 parameters(filename ,encoding ,callback).
     > callback takes two parameters i.e. (error ,data).
+    > The readFile() method is used to read the content of a file.
 unlink()
     > it takes 2 parameters(filename ,no param callback).
     > But do error handling in callback to track the error because if file is not there even then it sat file deleted. 
+    > The unlink() method is used to delete a file from the file system.
 rename()
-    >it takes 3 parameters(oldFilename ,newFilename ,callback).
+    > it takes 3 parameters(oldFilename ,newFilename ,callback).
+    > The rename() method is used to change the name of a file .
     
 # callback function : when we pass function as a parameter in another function .
 
