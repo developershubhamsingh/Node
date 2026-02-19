@@ -294,7 +294,7 @@ MongoDb (NoSql) :
 # > यह अगले 5 दिनों का data देता है, हर 3 घंटे पर एक record के साथ।
 # >let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${process.env.key}`;
 
- # > फिर data access करते समय:
+# > फिर data access करते समय:
 result.list[i].main.temp
 result.list[i].weather[0].description
 result.list[i].dt_txt
