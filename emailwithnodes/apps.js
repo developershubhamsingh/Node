@@ -1,6 +1,8 @@
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 dotenv.config();
+let port =7000;
+let apps = express();
 
 
 const transporter = nodemailer.createTransport({
@@ -26,3 +28,8 @@ transporter.sendMail(mailOptions, (error, info) => {
     }
 })
 
+apps.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
+}).on("error", (error) => {
+    console.log("Error occurred while starting the server.", error)
+})
