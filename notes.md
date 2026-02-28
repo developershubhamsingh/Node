@@ -469,6 +469,9 @@ Ex :const data = await axios.get("https://api.example.com/users");
  
 # > Nodemailer is a Node.js module used to send emails from your server.
 
+# जो काम तुरंत result नहीं देता, वो asynchronous काम है। और ऐसे काम के लिए async/await इस्तेमाल करते हैं।
+# Email भेजने में time लगता है, इसलिए यह asynchronous काम है। इसीलिए route को async बनाते हैं।
+
 # When is Nodemailer used?
 1) OTP / Verification Email
 Sending a 6-digit OTP to the user during login or signup.
@@ -493,7 +496,7 @@ Automatically sending notifications from the server, such as:
 
 > ` on - two step variation `
 > `paste this link on a browser name the app then create password-  https://myaccount.google.com/apppasswords`
->`generated app password length will be of 16 digit remove all this page then use it`
+>` generated app password for the learningfull5@gmail.com length will be of 16 digit remove all the space then use it `
 
 > `, for current learning app password is : chkgijkaqzwjraqh`
 
