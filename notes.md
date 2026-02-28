@@ -491,6 +491,12 @@ Automatically sending notifications from the server, such as:
 “Error Occurred”
 “Server Warning 
 
+> ` on - two step variation `
+> `paste this link on a browser name the app then create password-  https://myaccount.google.com/apppasswords`
+>`generated app password length will be of 16 digit remove all this page then use it`
+
+> `, for current learning app password is : chkgijkaqzwjraqh`
+
 # > > const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
