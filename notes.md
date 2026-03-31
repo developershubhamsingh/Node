@@ -34,12 +34,12 @@ git push -u origin main
 # NPM: https://www.npmjs.com/
     It is a open source registry where all packages are kept that anyone can try and contribute to the developments .
  
-# packages : it is a supporting library , in Nodejs we have node modules library.
+# packages : it is a supporting library 
     
 # json : 
-    javascript Object Notation .
-    Format to represent the data .
-    It is array of objects .
+  >  javascript Object Notation .
+  >  Format to represent the data .
+  >  It is array of objects .
 
 Ex : [
         {
@@ -54,24 +54,24 @@ Ex : [
         }
     ]
 
-object : single records but array of objects is multiple records mentioned above.
-     {
+# object : single records but array of objects is multiple records mentioned above.
+       {
             name: "3idiot" ,
             type :"education" ,
             ind : "bollywood"
         }
 # package.json : 
-        This is Entry point to the applications .
-        Contains metadata (name,version.descriptions).
-        Contains scripts( run ,build,test) .
-        Contains all record of the packages install .
+   >  This is Entry point to the applications .
+   >  Contains metadata (name,version.descriptions).
+   >  Contains scripts( run ,build,test) .
+   >  Contains all record of the packages install .
 
 # step to generate package.json 
-     NodejS must be installed in laptop
-     go inside the folder using cmd/terminal
-     type npm init / npm init -y
-     answer all questions
-     type YES
+   >  NodejS must be installed in laptop
+   >  go inside the folder using cmd/terminal
+   >  type npm init / npm init -y
+   >  answer all questions
+   >  type YES
 
 # package-lock.json : 
    > it is dependency tree .
@@ -79,20 +79,20 @@ object : single records but array of objects is multiple records mentioned above
    > it tells which package depends on what .
 
 # for node modules : npm i 
-    > node modules is a folder where all the package gets install .
-# npm i
-    > it first installs the main package by checking the package.json then looks for child dependency of the package from the package-lock and then install .
+   > node modules is a folder where all the package gets install .
+# npm i :
+   > it first installs the main package by checking the package.json then looks for child dependency of the package from the package-lock and then install .
 
-# gitignore : when you push the code to the git it ignores the node module folder .
+# gitignore : file or folder we don't want to push to git we write the file or folder name in gitignore file ex: node_module folder .
 
 local dep
 global
 dev
 
 # step to install package(local dep)
-    NodejS must be installed in laptop
-    > go inside the folder using cmd/terminal
-    > npm i package name / npm install package@version
+   > NodejS must be installed in laptop
+   > go inside the folder using cmd/terminal
+   > npm i package name / npm install package@version
 
 # ===================Day 2 ==================================
 
@@ -213,6 +213,8 @@ Delete > Remove
 
 => destructing in js : if both the side have the same value then remove one value and write one value .
     ex: category = category (then write it as only)  category .
+# Note:अधिकतर cases में इसे नहीं लिखना चाहिए 👉 apps.use(express.static(path.join(__dirname, "./views")))
+# Static folder use होता है:👉 CSS Images JS files Fonts 
 
 # Database (Mongodb) : 
 
