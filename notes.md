@@ -80,6 +80,7 @@ Ex : [
 
 # for node modules : npm i 
    > node modules is a folder where all the package gets install .
+   
 # npm i :
    > it first installs the main package by checking the package.json then looks for child dependency of the package from the package-lock and then install .
 
@@ -95,18 +96,26 @@ dev
    > npm i package name / npm install package@version
 
 # ===================Day 2 ==================================
+# Dependencies:
+  > Those packages which are required for the application to run in production.
+  > npm i package name  
 
 # for dev dependency
-    > npm i package name --save-dev
-    > package which is required at the time of development called as dev dependencies like Logging or for test cases.
-    > npm i chai --save-dev 
-    > hence node module is heavy folder to avoid the load over that we divide what to install on server wht not to install we differentiate between that .
+  > npm i package name --save-dev
+  > Those package which is required at the time of development called as dev dependencies like Logging or for test cases.
+  > npm i chai --save-dev 
+  > hence node module is heavy folder to avoid the load over that we divide what to install on server wht not to install we differentiate between that .
 
 # Basic NodeJS (Inbuilt package in node) (Os,file,http)
 
 1 KB = 1024 bytes        
 1 MB = 1024 × 1024 bytes = 1,048,576 bytes
 1 GB =1024 × 1024 × 1024 bytes = 1,073,741,824 bytes
+  or
+1 KB = 1000 Bytes
+1 MB = 1000 KB
+1 GB = 1000 MB
+1 TB = 1024 GB
 
 # fs : 
 writefile()
@@ -139,8 +148,6 @@ rename()
 
 local host = or = 127.0.0.1: port numbers
 avoid port numbers 8080 
-
-# Node.js is a runtime environment that allows to run JavaScript outside the browser and also create their own server. 
 
 # Handling Routes with http is difficult so Express is there for creating servers and handling routes.
 
