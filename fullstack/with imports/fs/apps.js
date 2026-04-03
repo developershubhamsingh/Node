@@ -1,5 +1,4 @@
 import express from "express";
-import ejs, { name } from "ejs";
 import path from "path";
 import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
