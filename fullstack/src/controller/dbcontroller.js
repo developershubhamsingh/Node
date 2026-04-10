@@ -12,7 +12,7 @@ const dbConnect = async () => {
         db = client.db('node');
         console.log("Database connection successful .");
     } catch (error) {
-        console.log("Database connection failed .");
+        console.log("Database connection failed .", error);
     }
 
 }
