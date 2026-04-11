@@ -260,7 +260,7 @@ MongoDb (NoSql) :
 > Clouds.
 
  # Need to install two things : 
-  # > mongo compass : Interface ( i.e GUI).
+  # > mongo compass : Interface (i.e GUI).
   # > mongodb community edition :To start the server .
 
 # connecting mongodb :
