@@ -385,13 +385,26 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
 
 # ===================Day 5 ==================================
 # Application ------ Redis ------- database .
- # > when user search for data  --> it application first check the redis (if data is not there ) --> then it will go database --> it takes the data stores it to the redis --> return back to the Applications.-->so that next time accessing to the data will be faster  .
 
- # NOTE: When a user requests data, the application first checks Redis If the data is not found in Redis, it fetches the data from the database, stores it in Redis, and then returns it to the application.Next time, the data is served directly from Redis, making access faster.
+ # > when user search for data  --> The application first check the redis (if data is not there ) --> then it will go to database --> it takes the data stores it to the redis --> return back to the Applications.--> so that next time accessing to the data will be faster  .
 
 # Redis :
-# > Redis acts as a cache between the application and the database to improve performance and reduce database load.
+# > Redis is an in-memory caching system that improves application performance by storing frequently used data in RAM.
  
+# Laptop/Phone की RAM
+> System की memory होती है
+> OS और apps use करते हैं
+> Temporary data store करती है
+
+# ⚡ Redis
+> एक software/database है
+> जो RAM का use करता है
+> Data को बहुत fast access करने के लिए cache बनाता है
+
+# 👉 जब तुम कहते हो:
+>  “App पहले Redis में देखता है” इसका मतलब है:
+>  App पहले RAM (memory) में stored data को check करता है ⚡
+
 # Caching Memory :
 # > Caching memory stores frequently used data temporarily so it can be accessed faster next time.
 
