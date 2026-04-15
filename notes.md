@@ -386,10 +386,19 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
 # ===================Day 5 ==================================
 # Application ------ Redis ------- database .
 
- # > when user search for data  --> The application first check the redis (if data is not there ) --> then it will go to database --> it takes the data stores it to the redis --> return back to the Applications.--> so that next time accessing to the data will be faster  .
+ # > when user search for data  --> The application first check in the redis (if data is not there ) --> then it will go to database --> it takes the data stores it to the redis --> return back to the Applications.--> so that next time accessing to the data will be faster  .
+
+<!-- Flow (सही तरीका)
+ User request करता है
+ Application Redis में check करता है
+✅ मिला → return (fast)
+❌ नहीं मिला → आगे बढ़े
+Application Database से data fetch करता है
+👉 Application उस data को Redis में store करता है given removal time ke anusaar taqi net time fast access ho.
+फिर user को response देता है -->
 
 # Redis :
-# > Redis is an in-memory caching system that improves application performance by storing frequently used data in RAM.
+# > Redis is an in-memory database caching system that improves application performance by storing frequently used data in RAM.
  
 # Laptop/Phone की RAM
 > System की memory होती है
@@ -421,7 +430,7 @@ mongodb+srv://<db_username>:<db_password>@cluster0.f8vmc.mongodb.net/?retryWrite
 # This is how we store data :
 # > keys * (to see all the key)
 # > set  keyname  value 
-# > set  keyname  value EX
+# > set  keyname  value EX //saves data 
 # > get  keyname i.e(to see the data).
 # > del  keyname i.e(to delete the data).
 # > FLUSHALL i.e( delete all keys together at once)
