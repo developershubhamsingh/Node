@@ -23,7 +23,7 @@ apps.use(express.urlencoded({ extended: true }))
 apps.use("/uploads", express.static(path.join(__dirname, "uploads")))
 // apps.use(express.static(__dirname + "/uploads"))
 
-// storage
+// storage //
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, path.join(__dirname, "uploads"))

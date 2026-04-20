@@ -487,7 +487,7 @@ Database query (MongoDB, MySQL)
 Redis operations
 File read/write
 setTimeout, promises
-# >Async–await is used for any task that takes time to complete.
+# > Async–await is used for any task that takes time to complete.
 
 # Axios → 3rd Party API से Data Fetch करने के लिए 
 External API से data लाने के लिए
@@ -536,24 +536,25 @@ Automatically sending notifications from the server, such as:
         pass: smtp key 
     }
 })
+# apps.use(express.json());
+> जब कोई client (Postman / frontend / browser) server को data भेजता है, वो string (raw format) में आता है — सीधे usable object नहीं होता।
+<!-- {
+  "email": "test@gmail.com",
+  "message": "Hello"
+} -->
+> लेकिन server पर ये ऐसे आता है:यानी string format में ❌
+<!-- "{\"email\":\"test@gmail.com\",\"message\":\"Hello\"}" -->
+> यहाँ express.json() काम करता है
+<!-- ये middleware automatically:
+raw JSON string को पढ़ता है
+उसे JavaScript object में convert करता है -->
+
 # > ab gmail app password option disable kr diya hai zo ki SMTP key hota hai   
  auth {
      user:gmail ,
      pass: no app password  (i.e no smtp key without this email cannot be sent ).
      }
-# >> Better to go with Resend API Key sign up and generate key safe fully https://resend.com/onboarding .
-# >> whe going with resend the go with syntax (there will be no services only host port auth ): 
-const transporter = nodemailer.createTransport({
-  host: "smtp.resend.com",
-  port: 587,       // TLS recommended
-  secure: false,   // false because 587 uses STARTTLS 
-  auth: {
-    user: "resend",
-    pass: process.env.RESEND_API_KEY
-  }
-  noneed to write secure Nodemailer automatically secure: false मान लेगा क्योंकि port 587 है
-});
-
+ 
 ### > imageuploads (with multer):
 # > Multer का काम = Node.js में फ़ाइल Upload करवाना (जैसे Image, PDF, Video वगैरह)।
 
@@ -565,6 +566,24 @@ const transporter = nodemailer.createTransport({
 
 >> Earlier images were saved in the database .
 >> But now we save it in a folder or uploading it to the object storage i.e s3bucket (AWS) etc.
+
+# apps.use(express.json());//middleware
+> JSON data को JavaScript object में बदलना + req.body में डालना
+# apps.use(express.urlencoded({ extended: true }));
+> 👉 express.urlencoded() → form data के लिए
+# Best practice 👉 दोनों लगा दो → हर type का data handle हो जाएगा ✅
+
+# uploads.single("image") क्या है?
+> 👉 ये middleware (multer) है
+> 👉 काम:
+> form से file पकड़ता है
+> उसे process करता है
+> और req.file में डाल देता है
+> 👉 "image" = input field का name
+
+# req.file क्या है?
+> 👉 ये object होता है जिसमें file की info होती है:
+
 # =================== Day 6 ==================================
 # headings style 
 **For bold**
