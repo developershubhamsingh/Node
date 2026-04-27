@@ -278,7 +278,7 @@ MongoDb (NoSql) :
 # ===================Day 4 ==================================
 
 #  > Always get the data from database .
-#  > Rare case w get data from file .
+#  > Rare case get data from file .
 
 # params :
 # > what we pass after /(slash).
