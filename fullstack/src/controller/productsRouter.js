@@ -531,7 +531,6 @@ const router = (navLink) => {
             let query = { "category_id": Number(id) }
             let products = await getData("products", query)
             res.render('products', { title: "products page", products, navLink }) //destructuring//
-
         })
     return productsRouter
 }
